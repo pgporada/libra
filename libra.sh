@@ -3,7 +3,7 @@ set -e
 # set the DEBUG env variable to turn on debugging
 [[ -n "$DEBUG" ]] && set -x
 
-CONSUL_LOGLEVEL=${CONSUL_LOGLEVEL:-warning}
+CONSUL_LOGLEVEL=${CONSUL_LOGLEVEL:-warn}
 CONSUL_CONNECT=${CONSUL_CONNECT:-consul.service.consul:8500}
 
 function usage {
