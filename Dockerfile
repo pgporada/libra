@@ -29,8 +29,8 @@ COPY rules.toml.tmpl /etc/consul-template/templates/rules.toml.tmpl
 COPY config.d /etc/consul-template/config.d
 
 # add the run scripts
-COPY ilba.sh /usr/bin/ilba
+COPY libra.sh /usr/bin/libra
 
 EXPOSE 80
 
-ENTRYPOINT ["ilba"]
+ENTRYPOINT ["libra"]

@@ -1,6 +1,6 @@
 # general config
 graceTimeOut = 10
-logLevel = "DEBUG"
+logLevel = "WARNING"
 
 # entrypoints
 defaultEntryPoints = ["http"]

@@ -3,16 +3,16 @@ set -e
 # set the DEBUG env variable to turn on debugging
 [[ -n "$DEBUG" ]] && set -x
 
-CONSUL_LOGLEVEL=${CONSUL_LOGLEVEL:-info}
+CONSUL_LOGLEVEL=${CONSUL_LOGLEVEL:-warning}
 CONSUL_CONNECT=${CONSUL_CONNECT:-consul.service.consul:8500}
 
 function usage {
     cat <<USAGE
-ilba                start a single app proxy for Consul services
+libra               start a single app proxy for Consul services
 
 Configure using the following environment variables:
 
-ilba vars:
+libra vars:
   SERVICE           the service to launch
 
   CIRCUIT_BREAKER   a Traefik circuit breaker expression
