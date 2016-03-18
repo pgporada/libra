@@ -7,13 +7,13 @@ balancer using off-the-shelf components.
 **Table of Contents**
 
 - [Libra](#libra)
-    - [What is it?](#what-is-it)
+    - [What is it made of?](#what-is-it-made-of)
     - [Usage](#usage)
     - [License](#license)
 
 <!-- markdown-toc end -->
 
-## What is it?
+## What is it made of?
 
 It uses:
 
