@@ -1,0 +1,17 @@
+[backends]
+  [backends.{{env "SERVICE"}}]
+    [backends.{{env "SERVICE"}}.LoadBalancer]
+      method = "drr"
+    [backends.{{env "SERVICE"}}.CircuitBreaker]
+      expression = "{{or (env `CIRCUIT_BREAKER`) `NetworkErrorRatio() > 0.5`}}"
+
+    {{range $i, $svc := service (env "SERVICE") "any"}}
+    [backends.{{env "SERVICE"}}.servers.{{$i}}]
+      url = "http://{{$svc.Address}}:{{$svc.Port}}"{{end}}
+
+[frontends]
+  [frontends.{{env "SERVICE"}}]
+    backend = "{{env `SERVICE`}}"
+    [frontends.{{env "SERVICE"}}.routes.default]
+      rule = "Path"
+      value = "/"

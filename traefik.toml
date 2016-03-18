@@ -1,0 +1,19 @@
+# general config
+graceTimeOut = 10
+logLevel = "DEBUG"
+
+# entrypoints
+defaultEntryPoints = ["http"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+# admin for debugging
+[web]
+address = ":8080"
+
+# file config
+[file]
+filename = "/etc/traefik/rules.toml"
+watch = true
