@@ -28,7 +28,7 @@ And it all runs in Docker, to boot.
 To run it in your cluster, run this:
 
 ```
-docker run --rm -name=${APP}-lb -e SERVICE=${APP} --rm -p 8000:80 asteris-llc/libra:latest
+docker run --rm --name=${APP}-lb -e SERVICE=${APP} --rm -p 8000:80 asteris-llc/libra:latest
 ```
 
 Where `APP` is the Consul application you would like balanced. Then, connect to
